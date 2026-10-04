@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="Automated brain tumor classification from magnetic resonance imaging (MRI) can support accessible medical image analysis, but conventional deep learning..." name="description">
+<meta content="NanoNet, Brain tumor classification, Lightweight neural networks, Model compression, Edge AI" name="keywords">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="NanoNet: Ultra-Lightweight Network for MRI Brain Tumor Classification toward Edge AI" property="og:title">
+  <meta content="Automated brain tumor classification from magnetic resonance imaging (MRI) can support accessible medical image analysis, but conventional deep learning..." property="og:description">
+  <meta content="website" property="og:type">
+  <meta content="https://ltnghia.github.io/NanoNet/static/images/fig1.jpg" property="og:image">
+<title>NanoNet: Ultra-Lightweight Network for MRI Brain Tumor Classification toward Edge AI</title>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+<link href="./static/css/bulma.min.css" rel="stylesheet">
+<link href="./static/css/bulma-carousel.min.css" rel="stylesheet">
+<link href="./static/css/bulma-slider.min.css" rel="stylesheet">
+<link href="./static/css/fontawesome.all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+<link href="./static/css/index.css" rel="stylesheet">
+<link href="./static/images/favicon.svg" rel="icon">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script defer src="./static/js/fontawesome.all.min.js"></script>
+<script src="./static/js/bulma-carousel.min.js"></script>
+<script src="./static/js/bulma-slider.min.js"></script>
+<script src="./static/js/index.js"></script>
+</head>
+<body>
+<nav aria-label="main navigation" class="navbar" role="navigation">
+<div class="navbar-brand">
+<a aria-expanded="false" aria-label="menu" class="navbar-burger" role="button">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</a>
+</div>
+<div class="navbar-menu">
+<div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+<a aria-label="Home" class="navbar-item" href="https://ltnghia.github.io/NanoNet/">
+<span class="icon">
+<i class="fas fa-home"></i>
+</span>
+</a>
+
+</div>
+</div>
+</nav>
+<section class="hero">
+<div class="hero-body">
+<div class="container is-max-desktop">
+<div class="columns is-centered">
+<div class="column has-text-centered">
+<h1 class="title is-1 publication-title">NanoNet: <br>Ultra-Lightweight Network for MRI Brain Tumor Classification toward&nbsp;Edge&nbsp;AI</h1>
+<div class="is-size-5 publication-authors">
+<span class="author-block">Le-Tran&nbsp;Nguyen<sup>1,2</sup>,</span>
+<span class="author-block">Huu-Thuan&nbsp;Huynh<sup>1,2</sup>,</span>
+<span class="author-block">Minh-Triet&nbsp;Tran<sup>1,2</sup>,</span>
+<span class="author-block">Trung-Nghia&nbsp;Le<sup>1,2*</sup></span>
+</div>
+<div class="is-size-5 publication-authors">
+<span class="author-block"><sup>1</sup>University of Science, Ho Chi Minh City, Vietnam,</span>
+<span class="author-block"><sup>2</sup>Vietnam National University, Ho Chi Minh City, Vietnam</span>
+</div>
+
+          <div class="is-size-5 publication-authors">
+<span class="author-block"><sup>*</sup>Corresponding&nbsp;author</span>
+</div>
+<div class="column has-text-centered">
+<div class="publication-links">
+<span class="link-block">
+<a aria-disabled="true" class="external-link button is-normal is-rounded is-dark" disabled title="Coming soon">
+<span class="icon">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span>Paper&nbsp;(coming&nbsp;soon)</span>
+</a>
+</span>
+<span class="link-block">
+<a aria-disabled="true" class="external-link button is-normal is-rounded is-dark" disabled title="Coming soon">
+<span class="icon">
+<i class="fab fa-github"></i>
+</span>
+<span>Code&nbsp;(coming&nbsp;soon)</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="hero teaser">
+<div class="container is-max-desktop">
+<div class="hero-body">
+
+<img alt="Architecture diagram of NanoNet, showing an MRI input, five inverted residual blocks, and a four-class output." class="interpolation-image" height="634" loading="lazy" src="./static/images/fig1.jpg" width="1458">
+      <h2 class="subtitle has-text-centered">NanoNet classifies MRI brain tumors at 92.8%&nbsp;accuracy with 8,132&nbsp;parameters and&nbsp;0.0105&nbsp;GFLOPs.</h2>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container is-max-desktop">
+
+<div class="columns is-centered has-text-centered">
+<div class="column is-four-fifths">
+<h2 class="title is-3">Abstract</h2>
+<div class="content has-text-justified"><p>Automated brain tumor classification from magnetic resonance imaging (MRI) can support accessible medical image analysis, but conventional deep learning models often exceed the resource budgets of highly constrained edge-AI platforms. We present NanoNet, an ultra-lightweight convolutional neural network designed for resource-constrained MRI classification and motivated by future edge-AI applications. Inspired by MobileNetV2, NanoNet substantially reduces network depth, channel capacity, expansion ratios, and final feature dimensionality, resulting in only five inverted residual blocks and 8,132&nbsp;parameters. We further investigate dependency-aware structured pruning, knowledge distillation, and INT8&nbsp;quantization-aware training for&nbsp;additional&nbsp;compression.</p><p>Experiments on the BRISC 2025&nbsp;benchmark show that NanoNet achieves 92.8%&nbsp;accuracy with 8,132&nbsp;parameters and 0.0105&nbsp;GFLOPs. At the same computational cost, it outperforms 70%-pruned MobileNetV2 by 2.9&nbsp;percentage points while using&nbsp;58.6%&nbsp;fewer&nbsp;parameters.</p><p>Its INT8&nbsp;TensorFlow Lite model requires only 27.7&nbsp;KB of storage, demonstrating strong potential for future&nbsp;edge-AI&nbsp;deployment.</p></div>
+</div>
+</div>
+
+
+
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="container is-max-desktop">
+
+<div class="columns is-centered has-text-centered">
+<div class="column is-four-fifths">
+<h2 class="title is-3">Method</h2>
+<div class="content has-text-justified"><p>NanoNet is progressively compressed through dependency-aware structured pruning, knowledge-distillation-based fine-tuning, and INT8&nbsp;quantization-aware training. The original NanoNet serves as the teacher during pruning and fine-tuning, and the resulting models are converted to INT8&nbsp;for deployment-oriented resource&nbsp;evaluation.</p></div>
+<div class="content has-text-centered"><img alt="Diagram of structured pruning, knowledge distillation, and INT8 quantization-aware training." class="interpolation-image" height="765" loading="lazy" src="./static/images/fig2.jpg" width="1773"></div><h2 class="subtitle has-text-centered"><strong>Figure&nbsp;2.</strong> Overview of compression pipeline. The original NanoNet is progressively compressed through dependency-aware structured pruning, knowledge-distillation-based fine-tuning, and INT8&nbsp;quantization-aware training (QAT), producing a compact model with deployment-oriented resource&nbsp;characteristics.</h2></div>
+</div>
+
+
+
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="container is-max-desktop">
+
+<div class="columns is-centered has-text-centered">
+<div class="column is-four-fifths">
+<h2 class="title is-3">Quantitative Results</h2>
+
+<div class="content has-text-justified"><p>The plot compares accuracy with computational cost for MobileNetV2 0.1&times; and NanoNet across pruning configurations. NanoNet&rsquo;s baseline reaches 92.8%&nbsp;accuracy at 0.0105&nbsp;GFLOPs; its 10%&nbsp;and 25%&nbsp;pruned variants reach 89.0%&nbsp;and 69.5%&nbsp;at&nbsp;0.0064&nbsp;and&nbsp;0.0029&nbsp;GFLOPs.</p></div><div class="content has-text-centered"><img alt="Accuracy versus GFLOPs for MobileNetV2 0.1&times; and NanoNet under pruning configurations." class="interpolation-image" height="733" loading="lazy" src="./static/images/fig3.png" width="1156"></div><h2 class="subtitle has-text-centered"><strong>Figure&nbsp;3.</strong> Accuracy-computational-cost trade-off between MobileNetV2 0.1&times; and NanoNet under different structured-pruning configurations. NanoNet operates in a substantially lower computational regime and provides a competitive accuracy operating point under extreme resource&nbsp;constraints.</h2><div class="content has-text-centered"><img alt="Table 1: Classification performance and resource characteristics of MobileNetV2 0.1&times; and NanoNet under structured pruning and quantization-aware training." class="interpolation-image" height="688" loading="lazy" src="./static/images/table1.png" width="810"></div><h2 class="subtitle has-text-centered"><strong>Table&nbsp;1.</strong> Classification performance and resource characteristics of MobileNetV2 0.1&times; and NanoNet under structured pruning and quantization-aware&nbsp;training.</h2><div class="content has-text-justified"><p>MobileNetV2 0.1&times; reaches 97.8%&nbsp;FP32&nbsp;accuracy at 0.0630&nbsp;GFLOPs, while baseline NanoNet reaches 92.8%&nbsp;at 0.0105&nbsp;GFLOPs with 8,132&nbsp;parameters. At the same reported computational cost, NanoNet exceeds 70%-pruned MobileNetV2 by 2.9&nbsp;percentage points and uses 58.6%&nbsp;fewer parameters; after INT8&nbsp;conversion, baseline NanoNet&nbsp;records&nbsp;90.1%&nbsp;accuracy.</p></div><h2 class="subtitle has-text-centered"><strong>Table&nbsp;2.</strong> Runtime activation memory and persistent model-storage footprint of selected INT8&nbsp;models. Peak Tensor Arena represents the maximum TensorFlow Lite runtime memory required during single-batch inference, while Model Storage represents the size of the converted .tflite model. Best in bold, second&nbsp;best&nbsp;underlined.</h2><div class="table-container"><table class="table is-fullwidth is-hoverable"><thead><tr><th scope="col">Model</th><th scope="col">Peak Tensor Arena (KB)</th><th scope="col">Model Storage (KB)</th></tr></thead><tbody><tr><th scope="row">MobileNetV2</th><td><strong>0.1&times;</strong></td><td></td></tr><tr><th scope="row">70%&nbsp;Pruned</th><td><u>333.4</u></td><td>81.4</td></tr><tr><th scope="row">60%&nbsp;Pruned</th><td><u>333.4</u></td><td>103.0</td></tr><tr><th scope="row">NanoNet</th><td></td><td></td></tr><tr><th scope="row">Baseline</th><td>394.6</td><td><u>27.7</u></td></tr><tr><th scope="row">10%&nbsp;Pruned</th><td>382.4</td><td><strong>27.6</strong></td></tr></tbody></table></div><div class="content has-text-justified"><p>Baseline NanoNet has a 27.7&nbsp;KB INT8&nbsp;model file, compared with 81.4&nbsp;KB and 103.0&nbsp;KB for the selected 70%- and 60%-pruned MobileNetV2 models. Its peak Tensor Arena use is 394.6&nbsp;KB, higher than the 333.4&nbsp;KB reported for those MobileNetV2 variants, so the smallest stored model does not have the lowest runtime&nbsp;activation&nbsp;memory.</p></div></div>
+</div>
+
+
+
+
+</div>
+</section>
+
+<section class="section" id="BibTeX">
+<div class="container is-max-desktop content">
+<h2 class="title">BibTeX</h2>
+<pre><code>@misc{nguyennanonet,
+  author = {Nguyen, Le-Tran and Huynh, Huu-Thuan and Tran, Minh-Triet and Le, Trung-Nghia},
+  title  = {NanoNet: Ultra-Lightweight Network for MRI Brain Tumor Classification toward Edge AI},
+}</code></pre>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="content has-text-centered">
+
+
+</div>
+<div class="columns is-centered">
+<div class="column is-8">
+<div class="content">
+<p>
+            This website is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+<p>
+            This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
